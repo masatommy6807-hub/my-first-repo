@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 50%, #a6c1ee 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -22,16 +22,19 @@
         }
 
         .container {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            border-radius: 24px;
+            box-shadow: 0 8px 40px rgba(160, 130, 210, 0.3);
             max-width: 500px;
             width: 100%;
             padding: 40px;
         }
 
         h1 {
-            color: #333;
+            color: #2d1b4e;
             text-align: center;
             margin-bottom: 30px;
             font-size: 28px;
@@ -46,23 +49,29 @@
         #taskInput {
             flex: 1;
             padding: 12px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border: 1.5px solid rgba(161, 140, 209, 0.4);
+            border-radius: 12px;
             font-size: 16px;
+            background: rgba(255, 255, 255, 0.6);
+            color: #3d2260;
+            outline: none;
             transition: border-color 0.3s;
         }
 
+        #taskInput::placeholder {
+            color: #b49fd4;
+        }
+
         #taskInput:focus {
-            outline: none;
-            border-color: #667eea;
+            border-color: #c084fc;
         }
 
         #addBtn {
             padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #a18cd1 0%, #c084fc 100%);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
@@ -71,7 +80,7 @@
 
         #addBtn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 16px rgba(161, 140, 209, 0.5);
         }
 
         #addBtn:active {
@@ -87,14 +96,15 @@
             align-items: center;
             gap: 12px;
             padding: 14px 16px;
-            background: #f8f9fa;
-            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(161, 140, 209, 0.25);
+            border-radius: 14px;
             margin-bottom: 8px;
             transition: all 0.3s;
         }
 
         .task-item:hover {
-            background: #eff1f5;
+            background: rgba(255, 255, 255, 0.7);
         }
 
         .task-item.completed {
@@ -103,43 +113,45 @@
 
         .task-item.completed .task-text {
             text-decoration: line-through;
-            color: #999;
+            color: #9b7fc0;
         }
 
         .checkbox {
             width: 20px;
             height: 20px;
             cursor: pointer;
-            accent-color: #667eea;
+            accent-color: #c084fc;
             flex-shrink: 0;
         }
 
         .task-text {
             flex: 1;
-            color: #333;
+            color: #2d1b4e;
             font-size: 16px;
+            font-weight: 500;
             word-break: break-word;
         }
 
         .delete-btn {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            border-radius: 6px;
+            background: rgba(251, 194, 235, 0.4);
+            color: #a0538a;
+            border: 1px solid rgba(251, 194, 235, 0.7);
+            border-radius: 8px;
             padding: 6px 12px;
             cursor: pointer;
             font-size: 14px;
+            font-weight: 600;
             transition: background 0.2s;
             flex-shrink: 0;
         }
 
         .delete-btn:hover {
-            background: #ff5252;
+            background: rgba(251, 194, 235, 0.7);
         }
 
         .empty-message {
             text-align: center;
-            color: #999;
+            color: #9b7fc0;
             padding: 40px 20px;
             font-size: 16px;
         }
@@ -148,8 +160,8 @@
             text-align: center;
             margin-top: 20px;
             padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
+            border-top: 1px solid rgba(161, 140, 209, 0.3);
+            color: #9b7fc0;
             font-size: 14px;
         }
     </style>
